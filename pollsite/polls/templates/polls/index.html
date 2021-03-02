@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/index_style.css' %}">
+
+<h1>Poll App Question Index</h1>
+<h4>Displays the five latest poll questions</h4>
+
+<div class="poll-grid">
+{% if latest_question_list %}
+    {% for question in latest_question_list %}
+        <a href="{% url 'polls:detail' question.id %}">
+            <div class="poll-grid-entry">
+                <p class="entry-header">{{ question.question_text }}</p>
+                <p class="entry-date"><em>{{ question.pub_date }}</em></p>
+            </div>
+        </a>
+    {% endfor %}
+{% else %}
+    <p>No polls available</p>
+{% endif %}
+</div>

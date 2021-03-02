@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --poll-font: "Poppins";
+
+    --poll-bg: #9ca6c9;
+    --poll-fg: #fffff0;
+    --poll-header: #ffaa83;
+    --poll-button-default: #aeb2c0;
+    --poll-button-hover: #f87335; 
+}
+
+* {
+    font-family: var(--poll-font), Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--poll-bg);
+}
+
+h1, h4 {
+    text-align: center;
+}
+
+a, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.poll-grid {
+    margin: 0 auto;
+    margin-top: 1rem;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 80vw;
+    grid-template-rows: repeat(auto-fit, auto);
+    grid-row-gap: 1rem;
+}
+
+.poll-grid-entry {
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 0.4rem;
+    width: 60vw;
+}
+
+.entry-header {
+    font-size: 1rem;
+    background-color: var(--poll-fg);
+    border-radius: 0.4rem 0.4rem 0 0;
+    padding: .5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in;
+}
+
+.entry-date {
+    font-size: 0.7rem;
+    background-color: var(--poll-header);
+    border-radius: 0 0 0.4rem 0.4rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in;
+}
+
+.poll-grid-entry:hover > .entry-header {
+    opacity: 1;
+}
+
+.poll-grid-entry:hover > .entry-date {
+    opacity: 1;
+}

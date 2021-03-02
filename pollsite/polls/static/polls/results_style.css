@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --poll-font: "Poppins";
+
+    --poll-bg: #9ca6c9;
+    --poll-fg: #fffff0;
+    --poll-header: #ffaa83;
+    --poll-button-default: #aeb2c0;
+    --poll-button-hover: #f87335; 
+}
+
+* {
+    font-family: var(--poll-font), Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--poll-bg);
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.results-box {
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    align-content: center;
+    text-align: center;
+    background-color: var(--poll-button-default);
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.2);
+    border-radius: 0.3rem;
+}
+
+.results-box > h1 {
+    background-color: var(--poll-header);
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.choice-display {
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, minmax(20vw,1fr));
+    grid-template-rows: repeat(auto-fit, 10vh);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+
+.choice-entry {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1rem;
+    background-color: var(--poll-fg);
+}
+
+.choice-text {
+    margin: auto;
+    background-color: var(--poll-fg);
+}
+
+.choice-vote {
+    align-self: center;
+    background-color: var(--poll-button-hover);
+}
+
+.centered {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
